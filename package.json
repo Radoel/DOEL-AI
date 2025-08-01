@@ -1,0 +1,11 @@
+{
+    "name": "doel-ai",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "vercel dev"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "vercel": "^32.0.0"
+    }
+}

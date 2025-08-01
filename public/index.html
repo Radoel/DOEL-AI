@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOEL AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Mobile toggle button -->
+    <button class="mobile-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- API Configuration Modal -->
+    <div id="configOverlay" class="config-overlay hidden"></div>
+    <div id="apiConfig" class="api-config hidden">
+        <h3>API Configuration</h3>
+        <input type="password" id="apiKeyInput" class="api-input" placeholder="Enter your OpenRouter API Key">
+        <div class="config-buttons">
+            <button class="config-btn save-btn" onclick="saveApiKey()">Save</button>
+            <button class="config-btn cancel-btn" onclick="hideApiConfig()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" onclick="startNewChat()">+ New Chat</button>
+            </div>
+
+            <div class="chat-history" id="chatHistory"></div>
+
+            <div class="sidebar-footer">
+                <button class="export-btn" onclick="exportChat()">📥 Export Chat</button>
+                <button class="export-btn" onclick="showApiConfig()" style="margin-top: 8px;">⚙️ API Config</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chat-header">
+                <h1>DOEL AI</h1>
+                <p style="color: #64748b; font-size: 14px; margin-top: 4px;">By Raafi with AI😍</p>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    <div class="message-avatar">AI</div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <p>Hello! Bro gw adalah jenis AI Yang di rancang oleh MUHAMAD RAAFI NAUFAL dengan di buatnya gw ini menggunakan AI juga heheheh 🤣🤣🤣</p>
+                        </div>
+                        <div class="message-time" id="initialTime"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            class="message-input" 
+                            id="messageInput" 
+                            placeholder="Harap terlebih dahulu kamu mengisi pesan di sisni! jika sudah langsung gasken klik enter"
+                            rows="1"
+                        ></textarea>
+                        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                            <span id="sendIcon">➤</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
